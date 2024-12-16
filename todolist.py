@@ -2,21 +2,26 @@
 # Date : 2024.12.16
 # ToDoList
 
-# 할 일 추가하기 
+# 할 일 추가하기 함수입니다.
 def add_task(task_list):
     task = input("What Add to list?:")
-    deadline = input("Enter the deadline : ex) 2001.03.15 ") # 데드라인 확인 가능을 추가
-    importnat = input("Enter the importance : ex) 중요, 보통, 낮음 ") # 중요도 기능 추가함
-    task_list.append((task, deadline, importnat)) # 데드라인이 같이 보여지게끔 추가 + 중요도
-    print()  # 줄 바꿈 용 코드
-    print(f"{task}, deadline {deadline}, importance {importnat} is added. ") # 같이 출력 할 수 있게 함. + 중요도 출력도 추가함
-    print()
+    # 데드라인 확인 가능을 추가했습니다.
+    deadline = input("Enter the deadline : ex) 2001.03.15 ")
+    # 중요도 기능 추가했습니다.
+    importnat = input("Enter the importance : ex) 중요, 보통, 낮음 ")
+    # 데드라인, 중요도 출력 될 수 있게 추가 하였습니다.
+    task_list.append((task, deadline, importnat))
+    # 줄 바꿈 용 코드입니다.
+    print()  
+     # 같이 출력 할 수 있게 수정했습니다.
+    print(f"{task}, deadline {deadline}, importance {importnat} is added. ") 
 
-# 할 일 제거하기 
+# 할 일 제거하기 함수입니다.
 def remove_task(task_list):
     print("To do list")
     for i, (task, deadline, importnat) in enumerate(task_list):
-        print(f"{i+1}. {task} (deadline: {deadline}, importance: {importnat})") # 성능 2개 추가함
+        # 성능 2개 추가했습니다.
+        print(f"{i+1}. {task} (deadline: {deadline}, importance: {importnat})")
     index = int(input("Enter the number you want to remove: ")) -1
     if 0 <= index < len(task_list):
         removed_task, removed_deadline, removed_importnat = task_list.pop(index)
@@ -26,14 +31,15 @@ def remove_task(task_list):
         print("Invaild number. Please try again.")
     print()
 
-# 할 일 확인하기
+# 할 일 확인하기 함수입니다.
 def print_list(task_list):
     print("To do list")
     for i, (task, deadline, importnat) in enumerate(task_list):
-        print(f"{i+1}. {task} (deadline: {deadline}, importance: {importnat})") # 두 기능을 다 출력할 수 있게 추가.
+        # 두 기능을 다 출력할 수 있게 추가하였습니다.
+        print(f"{i+1}. {task} (deadline: {deadline}, importanc# 두 기능을 다 출력할 수 있게 추가.e: {importnat})") 
     print()
 
-# 실행 코드
+# 실행 코드 함수입니다.
 def main():
     to_do_list = []
     while True:
