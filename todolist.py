@@ -36,7 +36,7 @@ def print_list(task_list):
     print("To do list")
     for i, (task, deadline, importnat) in enumerate(task_list):
         # 두 기능을 다 출력할 수 있게 추가하였습니다.
-        print(f"{i+1}. {task} (deadline: {deadline}, importanc# 두 기능을 다 출력할 수 있게 추가.e: {importnat})") 
+        print(f"{i+1}. {task} (deadline: {deadline}, importance: {importnat})")
     print()
 
 # 실행 코드 함수입니다.
